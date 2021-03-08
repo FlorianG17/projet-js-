@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+ <html lang="FR">
+   <head>
+     <meta charset="UTF-8">
+     <title> Facture </title>
+     <link href="C:\Users\flori\Desktop\Partiel js Florian Germanicus\Style.css" rel="stylesheet">
+     <script defer src="C:\Users\flori\Desktop\Partiel js Florian Germanicus\js.js"></script>
+   </head>
+   <body>
+     <section>
+       <!--Identiter de la société qui emet la facture-->
+       <h1>FACTURE</h1>
+       <div class="identite">
+          <p>The screenshot prod</p>
+          <p>Pas trop loin non plus 31000EnFace</p>
+          <p>07 12 34 56 78</p>
+          <p>TkTtuAuraTaFacture@gmail.com</p>
+       </div>
+       
+       <div class="numero">
+          <div class="facture">
+            <label for="facture">N° de la facture</label>
+            <input type="text" id="facture">
+          </div>
+          <div class="date">
+            <label for="date">DATE :</label>
+
+            <select>
+
+            </select>
+            <select id="mois"></select>
+            <select id="annee"></select>
+
+          </div>
+       </div>
+
+       <!-- destinataire de la facture et adresse d'expedition de la facture-->
+       <div class="destinataire">
+         <h5>A</h5>
+         <input type="text" placeholder="Nom de la sociéte" id="nsociete">
+         <input type="text" placeholder="Nom " id="Client">
+         <input type="text" placeholder="Rue" id="rue">
+         <input type="text" placeholder="Code postal,Ville" id="ville">
+         <input type="text" placeholder="Numero de telephone" id="telephone">
+
+       </div>
+
+       <div class="expediteur">
+          <h5>Experdier A</h5>
+          <input type="text" placeholder="Nom de la société" id="nsocietE">
+          <input type="text" placeholder="Nom " id="ClientE">
+          <input type="text" placeholder="Rue" id="rueE">
+          <input type="text" placeholder="Code postal,Ville" id="villeE">
+          <input type="text" placeholder="Numero de telephone" id="telephoneE">
+       </div>
+       
+       <table id="facture">
+           <caption> Details des produits facturés</caption>
+           <thead>
+              <tr>
+                  <th>Référence</th>
+                  <th>Description</th>
+                  <th>Quantité</th>
+                  <th>HT</th>
+                  <th>TVA (20%)</th>
+                  <th>TTC</th>
+              </tr>
+           </thead>
+             <tbody>
+              <FORM Name='Form1'>
+            <tr>
+                        <td> <input type ="text"name="reference" > </td>
+                        <td> <input type="text" name="description"></td>
+                        <td> <input type=" text" name="qte"value="0"></td>
+                        <td> <input type="text" name="ht"onKeyUp='CalculerMontantTTC()' Value="0"></td>
+                        <td> <input type ="text" name="tva" value="20%"></td>
+                        <td> <input type ="text" name="ttc"value=""></td>
+            </tr>
+              </FORM>
+            </tbody>
+       </table>
+       <button id="btnPopup" class="btnPopup">Ajouter un service existant</button>
+<div id="overlay" class="overlay">
+<div id="popup" class="popup">
+<h2>
+Choix du service
+<span id="btnClose" class="btnClose">&times;</span>
+</h2>
+<div>
+<select name="Service">
+  <option value="Cdc">Cdc</option>
+  <option value="Mise en ligne">Mise en ligne</option>
+  <option value="Reparer votre imprimante">Repare votre imprimante</option>
+</select>
+</div>
+</div>
+</div>
+ 
+       <button onclick="" id="bouton1"> Ajouter une ligne </button>
+   <!-- footer -->
+    <footer>
+        <p id="cheque">Veillez rédiger tous les chèques à l'ordre de <span>Nom de la société</span></p>
+        <p id="contact">Pour toute question concernant cette facture ,veuillez contacter: XXXXXXX au 
+            <span>XXXXXXXXX</span> ou à l'adresse <span>XXXXXXXXX</span>
+
+        </p>
+        <p>Nous vous remercions de votre confiance</p>
+        <button onclick="window.print()">Inprimer la page</button>
+    </footer>
+      </section>
+    </body>
+</html>
